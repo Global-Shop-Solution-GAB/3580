@@ -1,0 +1,301 @@
+Program.Sub.ScreenSU.Start
+gui.F_UpdOrd_ReOrd..create
+gui.F_UpdOrd_ReOrd..caption("Update Qty Order and Qty Reorder")
+gui.F_UpdOrd_ReOrd..size(4410,2340)
+gui.F_UpdOrd_ReOrd..position(0,0)
+gui.F_UpdOrd_ReOrd..event(unload,f_updord_reord_unload)
+gui.F_UpdOrd_ReOrd..alwaysontop(False)
+gui.F_UpdOrd_ReOrd..fontname("Arial")
+gui.F_UpdOrd_ReOrd..fontsize(8)
+gui.F_UpdOrd_ReOrd..forecolor(0)
+gui.F_UpdOrd_ReOrd..fontstyle(,,,,)
+gui.F_UpdOrd_ReOrd..BackColor(-2147483633)
+gui.F_UpdOrd_ReOrd..controlbox(True)
+gui.F_UpdOrd_ReOrd..maxbutton(False)
+gui.F_UpdOrd_ReOrd..minbutton(False)
+gui.F_UpdOrd_ReOrd..mousepointer(0)
+gui.F_UpdOrd_ReOrd..moveable(True)
+gui.F_UpdOrd_ReOrd..sizeable(True)
+gui.F_UpdOrd_ReOrd..ShowInTaskBar(True)
+gui.F_UpdOrd_ReOrd..titlebar(True)
+gui.F_UpdOrd_ReOrd.frmPL.create(frame)
+gui.F_UpdOrd_ReOrd.frmPL.caption("")
+gui.F_UpdOrd_ReOrd.frmPL.size(3750,990)
+gui.F_UpdOrd_ReOrd.frmPL.position(140,115)
+gui.F_UpdOrd_ReOrd.frmPL.visible(True)
+gui.F_UpdOrd_ReOrd.frmPL.fontname("Arial")
+gui.F_UpdOrd_ReOrd.frmPL.fontsize(8)
+gui.F_UpdOrd_ReOrd.lblPLstart.create(label,"Starting Product Line",True,1605,255,1,140,185,True,0,Arial,8,-2147483633,0)
+gui.F_UpdOrd_ReOrd.lblPLstart.parent("frmpl")
+gui.F_UpdOrd_ReOrd.txtPLStart.create(textbox,"",True,615,300,0,350,495,True,0,Arial,8,-2147483643,1)
+gui.F_UpdOrd_ReOrd.txtPLStart.parent("frmpl")
+gui.F_UpdOrd_ReOrd.txtPLStart.maxLength(2)
+gui.F_UpdOrd_ReOrd.cmdPLStart.create(button)
+gui.F_UpdOrd_ReOrd.cmdPLStart.caption("^")
+gui.F_UpdOrd_ReOrd.cmdPLStart.visible(True)
+gui.F_UpdOrd_ReOrd.cmdPLStart.size(435,300)
+gui.F_UpdOrd_ReOrd.cmdPLStart.zorder(0)
+gui.F_UpdOrd_ReOrd.cmdPLStart.position(950,480)
+gui.F_UpdOrd_ReOrd.cmdPLStart.enabled(True)
+gui.F_UpdOrd_ReOrd.cmdPLStart.parent("frmpl")
+gui.F_UpdOrd_ReOrd.cmdPLStart.fontname("Arial")
+gui.F_UpdOrd_ReOrd.cmdPLStart.fontsize(8)
+gui.F_UpdOrd_ReOrd.cmdPLStart.event(click,cmdplstart_click)
+gui.F_UpdOrd_ReOrd.lblPLEnd.create(label,"Ending Product Line",True,1575,255,1,1945,185,True,0,Arial,8,-2147483633,0)
+gui.F_UpdOrd_ReOrd.lblPLEnd.parent("frmpl")
+gui.F_UpdOrd_ReOrd.txtPLEnd.create(textbox,"",True,615,300,0,2295,490,True,0,Arial,8,-2147483643,1)
+gui.F_UpdOrd_ReOrd.txtPLEnd.parent("frmpl")
+gui.F_UpdOrd_ReOrd.txtPLEnd.maxLength(2)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.create(button)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.caption("^")
+gui.F_UpdOrd_ReOrd.cmdPlEnd.visible(True)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.size(435,300)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.zorder(0)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.position(2895,485)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.enabled(True)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.parent("frmpl")
+gui.F_UpdOrd_ReOrd.cmdPlEnd.fontname("Arial")
+gui.F_UpdOrd_ReOrd.cmdPlEnd.fontsize(8)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.event(click,cmdplend_click)
+gui.F_UpdOrd_ReOrd.cmdUpd.create(button)
+gui.F_UpdOrd_ReOrd.cmdUpd.caption("Update")
+gui.F_UpdOrd_ReOrd.cmdUpd.visible(True)
+gui.F_UpdOrd_ReOrd.cmdUpd.size(855,375)
+gui.F_UpdOrd_ReOrd.cmdUpd.zorder(0)
+gui.F_UpdOrd_ReOrd.cmdUpd.position(1570,1300)
+gui.F_UpdOrd_ReOrd.cmdUpd.enabled(True)
+gui.F_UpdOrd_ReOrd.cmdUpd.fontname("Arial")
+gui.F_UpdOrd_ReOrd.cmdUpd.fontsize(8)
+gui.F_UpdOrd_ReOrd.cmdUpd.event(click,cmdupd_click)
+gui.F_UpdOrd_ReOrd.txtPLStart.tabstop(True)
+gui.F_UpdOrd_ReOrd.txtPLStart.tabindex(1)
+gui.F_UpdOrd_ReOrd.cmdPLStart.tabstop(True)
+gui.F_UpdOrd_ReOrd.cmdPLStart.tabindex(2)
+gui.F_UpdOrd_ReOrd.txtPLEnd.tabstop(True)
+gui.F_UpdOrd_ReOrd.txtPLEnd.tabindex(3)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.tabstop(True)
+gui.F_UpdOrd_ReOrd.cmdPlEnd.tabindex(4)
+gui.F_UpdOrd_ReOrd.cmdUpd.tabstop(True)
+gui.F_UpdOrd_ReOrd.cmdUpd.tabindex(5)
+
+
+gui.F_updating..create
+gui.F_updating..caption("Processing...")
+gui.F_updating..size(4605,2340)
+gui.F_updating..position(0,0)
+gui.F_updating..alwaysontop(False)
+gui.F_updating..fontname("Arial")
+gui.F_updating..fontsize(8)
+gui.F_updating..forecolor(0)
+gui.F_updating..fontstyle(,,,,)
+gui.F_updating..BackColor(-2147483633)
+gui.F_updating..controlbox(False)
+gui.F_updating..maxbutton(True)
+gui.F_updating..minbutton(True)
+gui.F_updating..mousepointer(0)
+gui.F_updating..moveable(True)
+gui.F_updating..sizeable(True)
+gui.F_updating..ShowInTaskBar(True)
+gui.F_updating..titlebar(True)
+gui.F_updating.lblpros.create(label,"Updating table...",True,2235,420,0,445,400,True,0,Arial,14,-2147483633,0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.UDT.uPart.Define("PART",String,PART)
+Variable.UDT.uPart.Define("LOCATION",String,LOCATION)
+Variable.UDT.uPart.Define("PREV_MO",Long,PREV_MO)
+Variable.uGlobal.uPart.Declare("uPart")
+Variable.UDT.uPartOL.Define("PART",String,PART)
+Variable.UDT.uPartOL.Define("LOCATION",String,LOCATION)
+Variable.UDT.uPartOL.Define("QTY",Long,QTY)
+Variable.uGlobal.uPartOL.Declare("uPartOL")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Global.General.CallWrapperSync(50,"INV430")
+
+Gui.F_UpdOrd_ReOrd..Show
+
+Program.Sub.Main.End
+
+program.sub.cmdplstart_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdplstart_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTmp.Declare(String)
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.String.Split("PL*!*PL Name","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1500*!*2500","*!*",V.Local.iWidths)
+V.Local.sSql.Set("SELECT PRODUCT_LINE, PRODUCT_LINE_NAME FROM "PRODUCT_LINE" WHERE KEY_DATA='ORDPRDLN' ORDER BY PRODUCT_LINE")
+F.Intrinsic.UI.MiniBrowser("Select a Record",conx,V.Local.sSql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Record was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	F.Intrinsic.String.Trim(V.Local.sRet(0),V.Local.sTmp)
+	Gui.F_UpdOrd_ReOrd.txtPLStart.Text(V.Local.sTmp)
+	Gui.F_UpdOrd_ReOrd.txtPLEnd.Text(V.Local.sTmp)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdplstart_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_INV_QtyOrd_QtyReorderVar2.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdplstart_click.end
+
+program.sub.f_updord_reord_unload.start
+F.Intrinsic.Control.End
+
+
+program.sub.f_updord_reord_unload.end
+
+program.sub.cmdupd_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdupd_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iOrderQty.Declare(Long)
+V.Local.iReOrderQty.Declare(Long)
+V.Local.sPart.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.dMonthPev1.Declare(Date)
+V.Local.sMonthPev1.Declare(String)
+V.Local.dMonthPev2.Declare(Date)
+V.Local.sMonthPev2.Declare(String)
+V.Local.dMonthPev3.Declare(Date)
+V.Local.sMonthPev3.Declare(String)
+
+
+Gui.F_updating..Visible(True)
+
+F.Intrinsic.Date.DateAdd("M",-1,V.Ambient.Date,V.Local.dMonthPev1)
+F.Intrinsic.Date.DateAdd("M",-2,V.Ambient.Date,V.Local.dMonthPev2)
+F.Intrinsic.Date.DateAdd("M",-3,V.Ambient.Date,V.Local.dMonthPev3)
+F.Intrinsic.Date.Month(V.Local.dMonthPev1,V.Local.sMonthPev1)
+F.Intrinsic.String.LPad(V.Local.sMonthPev1,"0",2,V.Local.sMonthPev1)
+F.Intrinsic.Date.Month(V.Local.dMonthPev2,V.Local.sMonthPev2)
+F.Intrinsic.String.LPad(V.Local.sMonthPev2,"0",2,V.Local.sMonthPev2)
+F.Intrinsic.Date.Month(V.Local.dMonthPev3,V.Local.sMonthPev3)
+F.Intrinsic.String.LPad(V.Local.sMonthPev3,"0",2,V.Local.sMonthPev3)
+
+
+V.uGlobal.uPart.Redim(0,0)
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.String.Concat("SELECT PART, LOCATION, (QTY_USAGE_MO_",V.Local.sMonthPev1,"+QTY_USAGE_MO_",V.Local.sMonthPev2,"+QTY_USAGE_MO_",V.Local.sMonthPev3,") AS PREV_MO FROM V_INVENTORY_MSTR ",V.Local.sSql)
+F.Intrinsic.String.Concat(V.Local.sSql,"WHERE PRODUCT_LINE BETWEEN '",V.Screen.F_UpdOrd_ReOrd!txtPLStart.Text,"' AND '",V.Screen.F_UpdOrd_ReOrd!txtPLEnd.Text,"'",V.Local.sSql)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstuPart",V.Local.sSql)
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstuPart","V.uGlobal.uPart",False)
+
+V.uGlobal.uPartOL.Redim(0,0)
+V.Local.sSql.Set("SELECT PART, LOCATION,SUM(QTY_ORDERED) AS QTY FROM V_ORDER_LINES ")
+F.Intrinsic.String.Concat(V.Local.sSql,"WHERE DATE_ITEM_PROM BETWEEN DATEADD(MONTH,-12,CURDATE()) AND DATEADD(MONTH,3,CURDATE()) GROUP BY PART, LOCATION",V.Local.sSql)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstuPartOL",V.Local.sSql)
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstuPartOL","V.uGlobal.uPartOL",True)
+F.ODBC.Connection!conx.Close
+
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uPart.UBound,1)
+	V.Local.iOrderQty.Set(0)
+	V.Local.iReOrderQty.Set(0)
+	V.Local.sPart.Set(V.uGlobal.uPart(V.Local.iC)!PART)
+	V.Local.iOrderQty.Set(V.uGlobal.uPart(V.Local.iC)!PREV_MO)
+	F.Intrinsic.String.Replace(V.Local.sPart,"'","''",V.Local.sPart)
+	F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uPartOL!PART,V.uGlobal.uPart(V.Local.iC)!PART,V.uGlobal.uPartOL!LOCATION,V.uGlobal.uPart(V.Local.iC)!LOCATION,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet(0),<>,"")
+		F.Intrinsic.Math.Add(V.Local.iOrderQty,V.uGlobal.uPartOL(V.Local.sRet(0))!QTY,V.Local.iOrderQty)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Math.Div(V.Local.iOrderQty,2,V.Local.iReOrderQty)
+	F.ODBC.Connection!conx2.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+	V.Local.sSql.Set("SELECT * FROM INVENTORY_MSTR WHERE PART='")
+	F.Intrinsic.String.Concat(V.Local.sSql,V.Local.sPart,"' AND LOCATION='",V.uGlobal.uPart(V.Local.iC)!LOCATION,"'",V.Local.sSql)
+	F.ODBC.Connection!conx2.OpenRecordsetRW("rstUpdatePart",V.Local.sSql)
+
+	F.Intrinsic.Control.If(V.ODBC.conx2!rstUpdatePart.EOF,=,False)
+			F.ODBC.conx2!rstUpdatePart.Set!QTY_ORDER(V.Local.iOrderQty)
+			F.ODBC.conx2!rstUpdatePart.Set!QTY_REORDER(V.Local.iReOrderQty)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx2!rstUpdatePart.Update
+	F.ODBC.Connection!conx2.Close
+F.Intrinsic.Control.Next(V.Local.iC)
+Gui.F_UpdOrd_ReOrd.txtPLEnd.Text("")
+Gui.F_UpdOrd_ReOrd.txtPLStart.Text("")
+Gui.F_updating..Visible(False)
+
+F.Intrinsic.UI.Msgbox("Process Finished","End")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdupd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_INV_QtyOrd_QtyReorderVar2.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdupd_click.end
+
+Program.Sub.cmdplend_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdplend_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTmp.Declare(String)
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.String.Split("PL*!*PL Name","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1500*!*2500","*!*",V.Local.iWidths)
+V.Local.sSql.Set("SELECT PRODUCT_LINE, PRODUCT_LINE_NAME FROM "PRODUCT_LINE" WHERE KEY_DATA='ORDPRDLN' ORDER BY PRODUCT_LINE")
+F.Intrinsic.UI.MiniBrowser("Select a Record",conx,V.Local.sSql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Record was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	F.Intrinsic.String.Trim(V.Local.sRet(0),V.Local.sTmp)
+	Gui.F_UpdOrd_ReOrd.txtPLEnd.Text(V.Local.sTmp)
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdplend_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_INV_QtyOrd_QtyReorderVar2.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdplend_click.End
+
+Program.Sub.Comments.Start
+${$0$}$GAB_INV_QtyOrd_QtyReorder$}$RRODRIGUEZ$}$7/4/2012
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$They still want to pick product lines, so let's leave that in place.
+Order Quantity needs to be last three months usage, plus sales order demand for next a previous 12 months.
+Reorder Quantity is half the Order Quantity
+No exceptions - every part in the Product Line.
+
+${$4$}$0$}$$}$0$}$-1$}$RICARDO$}$10/16/2012 2:49:36 PM$}$Add three months before for sales orders
+Three months before for the usage
+Program.Sub.Comments.End
+
